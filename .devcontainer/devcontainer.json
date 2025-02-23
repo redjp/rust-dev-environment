@@ -1,12 +1,29 @@
 {
+    // コンテナの名前（VS Codeの表示用）
     "name": "Rust Dev Environment",
-    "image": "rust-dev-env",
+
+    // イメージのビルド設定
+    "build": {
+        // 使用するDockerfileのパス（.devcontainerから見た相対パス）
+        "dockerfile": "../Dockerfile",
+        // ビルドコンテキスト（Dockerfileと同じディレクトリを指定）
+        "context": ".."
+    },
+
+    // コンテナ内の作業ディレクトリ
     "workspaceFolder": "/usr/src/myapp",
+
+    // ローカルフォルダとコンテナ内のマウント設定
     "mounts": [
+        // ローカルのプロジェクトフォルダをコンテナに同期
         "source=${localWorkspaceFolder},target=/usr/src/myapp,type=bind,consistency=cached"
     ],
+
+    // VS Codeで使う拡張機能
     "extensions": [
+        // Rust用のコード補完や解析
         "rust-lang.rust-analyzer",
-        "ms-vscode-remote.remote-containers"
+        // リモート開発用のサポート
+        "ms-vscode-remote.remote-containers",
     ]
 }

@@ -13,3 +13,5 @@ WSL内で構築したRust開発環境です。
    git clone https://github.com/redjp/rust-dev-environment.git
    cd rust-dev-environment
    ```
+
+2. VSCodeで「Reopen in Container」を選択
