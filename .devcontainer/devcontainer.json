@@ -1,0 +1,12 @@
+{
+    "name": "Rust Dev Environment",
+    "image": "rust-dev-env",
+    "workspaceFolder": "/usr/src/myapp",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/usr/src/myapp,type=bind,consistency=cached"
+    ],
+    "extensions": [
+        "rust-lang.rust-analyzer",
+        "ms-vscode-remote.remote-containers"
+    ]
+}
