@@ -10,5 +10,6 @@ WSL内で構築したRust開発環境です。
 ## セットアップ
 1. クローン:
    ```bash
-   git clone https://github.com/あなたのユーザー名/rust-dev-environment.git
+   git clone https://github.com/redjp/rust-dev-environment.git
    cd rust-dev-environment
+   ```
